@@ -3,8 +3,6 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=fukubie&label=Profile%20views&color=0e75b6&style=flat" alt="fukubie" /> </p>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=fukubie" alt="fukubie" /></a> </p>
-
 - 🔭 I’m currently working on **a blog**
 
 - 🌱 I’m currently learning **Web development/Prompt engineering**
@@ -26,9 +24,5 @@
 
 <h3 align="left">Support:</h3>
 <p><a href="https://www.buymeacoffee.com/fukubie"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="fukubie" /></a></p><br><br>
-
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=fukubie&show_icons=true&locale=en&layout=compact" alt="fukubie" /></p>
-
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=fukubie&show_icons=true&locale=en" alt="fukubie" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=fukubie&" alt="fukubie" /></p>
