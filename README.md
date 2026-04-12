@@ -1,9 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/render?type=waving&color=0e75b6&height=200&section=header&text=Abdelrahman%20Mohamed&fontSize=50&animation=fadeIn" />
-
-  ### 🚀 Full Stack Developer from the US
-  
-  [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=0e75b6&width=435&lines=Building+modern+web+apps;Mastering+Prompt+Engineering;Passionate+about+Mathematics;I+love+writing+code+and+stories)](https://git.io/typing-svg)
+  <h1><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=35&pause=1000&color=0e75b6&center=true&vCenter=true&width=600&lines=Hi+👋,+I'm+Abdelrahman+Mohamed;Full+Stack+Developer;Welcome+to+my+Github!" alt="Typing SVG" /></h1>
 
   <p align="center">
     <img src="https://komarev.com/ghpvc/?username=fukubie&label=Profile%20views&color=0e75b6&style=flat-square" alt="fukubie" />
@@ -52,8 +48,8 @@
 ### 📊 GitHub Activity
 
 <p align="center">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=fukubie&show_icons=true&theme=tokyonight&hide_border=true" />
-  <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=fukubie&theme=tokyonight&hide_border=true" />
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=fukubie&show_icons=true&theme=tokyonight&hide_border=true" />
+  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=fukubie&theme=tokyonight&hide_border=true" />
 </p>
 
 <div align="center">
