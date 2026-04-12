@@ -25,7 +25,7 @@
 <h3 align="left">Support:</h3>
 <p><a href="https://www.buymeacoffee.com/fukubie"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="fukubie" /></a></p><br><br>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=fukubie&" alt="fukubie" /></p>
+<p><img src="https://github-readme-streak-stats.herokuapp.com/?user=fukubie&" alt="fukubie" /></p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/fukubie/gitrepo/output/github-contribution-grid-snake-dark.svg">
