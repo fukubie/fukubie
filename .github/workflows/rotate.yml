@@ -1,0 +1,31 @@
+name: Rotate README GIF
+on:
+  schedule:
+    - cron: '0 * * * *' # This runs every hour automatically
+  workflow_dispatch:      # This allows you to click a button to test it
+
+jobs:
+  rotate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write    # Crucial: allows the bot to edit your README
+    steps:
+      - uses: actions/checkout@v3
+      - name: Pick a Pro GIF
+        run: |
+          URLS=(
+            "https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/72903324-cf57-4e90-80a6-ed3c9734e0ed"
+            "https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/af212da4-8588-4d7c-8400-16e56f2746a0"
+            "https://user-images.githubusercontent.com/74038190/212749447-bfb7e725-6987-49d9-ae85-2015e3e7cc41.gif"
+            "https://user-images.githubusercontent.com/74038190/212897782-96581536-54a0-4b87-87b4-5e55f95e8a8b.gif"
+          )
+          SELECTED_URL=${URLS[$RANDOM % ${#URLS[@]}]}
+          sed -i '//,//c\\n<img src="'"$SELECTED_URL"'" width="400" align="right" />\n' README.md
+
+      - name: Push Update
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md
+          git commit -m "rotate gif" || echo "No changes"
+          git push
