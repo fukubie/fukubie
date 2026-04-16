@@ -1,35 +1,45 @@
 name: Rotate README GIF
+
 on:
   schedule:
-    - cron: '0 * * * *' # This runs every hour automatically
-  workflow_dispatch:      # This allows you to click a button to test it
+    - cron: '0 * * * *' # This runs every hour
+  workflow_dispatch:      # This allows you to run it manually for testing
 
 jobs:
   rotate:
     runs-on: ubuntu-latest
     permissions:
-      contents: write    # Crucial: allows the bot to edit your README
+      contents: write    # Required to push changes back to your profile
+      
     steps:
-      - uses: actions/checkout@v3
-      - name: Pick a Pro GIF
-        run: |
-          URLS=(
-            "https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/72903324-cf57-4e90-80a6-ed3c9734e0ed"
-            "https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/af212da4-8588-4d7c-8400-16e56f2746a0"
-            "https://user-images.githubusercontent.com/74038190/212749447-bfb7e725-6987-49d9-ae85-2015e3e7cc41.gif"
-            "https://user-images.githubusercontent.com/74038190/212897782-96581536-54a0-4b87-87b4-5e55f95e8a8b.gif"
-          )
-          SELECTED_URL=${URLS[$RANDOM % ${#URLS[@]}]}
-          sed -i '//,//c\\n<img src="'"$SELECTED_URL"'" width="400" align="right" />\n' README.md
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       - name: Pick a Pro GIF
         run: |
+          # The list of GIF URLs
           URLS=(
             "https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/72903324-cf57-4e90-80a6-ed3c9734e0ed"
             "https://github.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/assets/74038190/af212da4-8588-4d7c-8400-16e56f2746a0"
             "https://user-images.githubusercontent.com/74038190/212749447-bfb7e725-6987-49d9-ae85-2015e3e7cc41.gif"
             "https://user-images.githubusercontent.com/74038190/212897782-96581536-54a0-4b87-87b4-5e55f95e8a8b.gif"
           )
+          
+          # Randomly select one URL
           SELECTED_URL=${URLS[$RANDOM % ${#URLS[@]}]}
-          # This line below is the engine. It finds the markers and swaps the content.
-          sed -i '//,//c\\n<img src="'"$SELECTED_URL"'" width="350" align="right" />\n\n' README.md
+          
+          # Create the HTML tag
+          NEW_IMAGE_TAG="<img src=\"$SELECTED_URL\" width=\"350\" align=\"right\" />"
+          
+          # Logic: Search for the placeholder and replace it with the GIF tag + the placeholder again
+          # We put the placeholder back so the script can find it again next hour!
+          sed -i "s|GIPHY_HOLDER_PLACEHOLDER|$NEW_IMAGE_TAG\n|" README.md
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          # Only commit if there are changes to avoid workflow errors
+          git commit -m "Rotate Profile GIF" || exit 0
+          git push
