@@ -50,7 +50,7 @@
 ### 📊 GitHub Activity
 
 <p align="center">
-  <img height="170" src="https://github-readme-stats-eight-theta.vercel.app/api?username=fukubie&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" />
+  <img height="170" src="https://github-stats-extended.vercel.app/api?username=fukubie&show_icons=true&theme=tokyonight" />
   <img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=fukubie&theme=tokyonight" />
 </p>
 
